@@ -1,0 +1,599 @@
+
+/* import fonts from fonts.css file */
+@import url(./fonts.css);
+
+/* CSS Variables */
+@import url(./partials/variables.css);
+
+/* Global Variables */
+@import url(./partials/global.css);
+
+
+/* */
+body {
+  font-family: "Montserrat";
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Preloader */
+.eye{
+  width: 20px; height: 8px;
+  background-color: rgba(245,245,230,1);
+  border-radius:0px 0px 20px 20px;
+  position: relative;
+  left: 10px; top: 40px;
+  box-shadow:  40px 0px 0px 0px rgba(245,245,230,1);              
+}
+
+.head{
+  -webkit-backface-visibility: hidden;
+  position: relative;
+  margin: -250px auto;
+  width: 80px; height: 80px;
+  background-color: #111;
+  border-radius:50px;
+  box-shadow: inset -4px 2px 0px 0px rgba(245,245,230,1);
+  -webkit-animation:headAnim 1.5s infinite alternate;
+  -webkit-animation-timing-function:ease-out;
+}
+
+.body{ 
+  position: relative;
+  margin: 90px auto;
+  width: 140px; height: 120px;
+  background-color: #111;
+  border-radius: 50px/25px ;
+  box-shadow: inset -5px 2px 0px 0px rgba(245,245,230,1);
+  -webkit-animation:bodyAnim 1.5s infinite alternate;
+  -webkit-animation-timing-function:ease-out;  
+}
+
+  @-webkit-keyframes headAnim{
+         0%{ top:0px; }
+         50%{ top:10px; }
+         100% { top:0px;} 
+  }
+
+  @-webkit-keyframes bodyAnim{
+         0%{ top:-5px; }
+         50%{ top:10px; }
+         100% { top:-5px;} 
+  }
+
+.circ{
+  -webkit-backface-visibility: hidden;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  width: 200px; height: 300px;
+  background-color: #111;
+  border-radius: 0px 0px 50px 50px;
+  position: relative;
+  z-index: -1;  
+  left: 0%; top: 20%;
+  overflow: hidden;
+}
+
+.hands{
+  -webkit-backface-visibility: hidden;
+  margin-top: 140px;
+  width: 120px;height: 120px;
+  position: absolute;
+  background-color: #111;
+  border-radius:20px;
+  box-shadow:-1px -4px 0px 0px rgba(245,245,230,1);
+  -webkit-transform:rotate(45deg);
+  top:75%;left: 16%;
+  z-index: 1;
+  -webkit-animation:bodyAnim 1.5s infinite alternate;
+  -webkit-animation-timing-function:ease-out;
+}
+
+.load{  
+  position: absolute;
+  width: 7ch; height: 32px;
+  text-align: left;
+  line-height: 32px;
+  margin: -10px auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Montserrat';
+  font-size: 28px;
+  font-weight: 400;
+  color:rgba(245,245,230,1);
+  left: 2%; top: 5%;
+  -webkit-animation: fontAnim 3.75s infinite;
+  -webkit-animation-timing-function:ease-out;
+  word-wrap: break-word;
+  display:block;
+  overflow: hidden;
+}
+
+  @-webkit-keyframes fontAnim{
+        0%{ width:7ch; }
+       16%{ width:8ch; }
+       32%{ width:9ch; }
+       48%{ width:10ch; }
+       64%{ width:11ch; }
+       80%{ width:12ch; }
+     100% { width:13ch;} 
+  }
+
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.loader {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin-right: 0px;
+  margin-top: 250px;
+  border: 4px solid rgba(245,245,230,1);
+  animation: loader 1.5s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(245,245,230,1);
+  animation: loader-inner 1.5s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(180deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  75% {
+    transform: rotate(360deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  
+  25% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 100%;
+  }
+  
+  75% {
+    height: 100%;
+  }
+  
+  100% {
+    height: 0%;
+  }
+}
+
+
+/* Start Navigation */
+
+.header-area {
+  opacity: 0;
+  display: none;
+}
+
+.header-area .main-menu .navbar {
+  padding: 1rem 5rem;
+}
+
+.header-area .main-menu .nav-item .nav-link {
+  font-family: "Montserrat";
+  font-size: 15px;
+  line-height: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 1.6rem;
+  color: var(--title-color);
+}
+
+.header-area .main-menu .navbar-nav .active a{
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-area .main-menu .navbar-nav a:hover{
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* End Navigation */
+
+/* Start Banner Area */
+
+.site-main .site-banner {
+  background: url(../images/banner4.jpg) no-repeat center center/cover;
+}
+
+.site-main .site-banner .site-title h2{
+  padding-top: 25%;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.site-main .site-banner .social-media {
+  margin-top: 20px;
+  margin-bottom: 1rem;
+}
+
+.site-main .site-banner .site-title .social-media a {
+  color: #000;
+  text-decoration: none;
+}
+
+.site-main .site-banner .site-title .social-media .fab {
+  margin-right: 20px;
+}
+
+
+.site-main .site-banner .site-title h2::after {
+  content: "";
+  height: 2px;
+  width: 10vw;
+  background: #000;
+  display: inline-block;
+  margin-left: 5%;
+  transform: translateY(-10px);
+}
+
+.site-main .site-banner .site-title h1 {
+  font-size: 7.5rem;
+  font-weight: 800;
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.site-main .site-banner .site-title h4 {
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.site-main .site-banner .banner-image > img {
+  padding: 7rem 0;
+  width: 90rem;
+}
+
+.title-text {
+  font: normal bold 50px/72px;
+}
+
+
+/* End Banner Area */
+
+
+
+/* Start About Area */
+.site-main .about-area {
+  padding: 8rem 5rem;
+}
+
+.site-main .about-area .about-title h2 > span {
+  display: block;
+  font-weight: bold;
+  font-size: 4rem;
+  letter-spacing: 13px;
+}
+
+.site-main .about-area .about-title h2 .story {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4.7rem;
+  font-weight: 800;
+  line-height: 75px;
+}
+
+.site-main .about-area .about-title .paragraph > p {
+  padding: 0.4rem 0;
+}
+/* End About Area */
+
+
+/* Start Skill Area */
+.site-main .skill-area {
+  padding: 1rem 10rem;
+  margin-bottom: 4rem;
+}
+
+.site-main .skill-area .first-row .col-lg-4 {
+  display: flex;
+  justify-content: center;
+}
+
+.site-main .skill-area .first-row .col-lg-4 > .single-skill {
+  border: 1px solid var(--border-color);
+  text-align: center;
+  padding: 1.1rem 0rem;
+  margin: 0.9rem 0;
+  width: 150px;
+  height: 170px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.site-main .skill-area .first-row .col-lg-4 > .single-skill > img {
+  width: 70%;
+  height: 90%;
+  filter: brightness(0.2);
+}
+
+.site-main .skill-area .first-row .col-lg-4 > .single-skill:hover {
+  box-shadow: var(--box-shadow);
+  transform: scale(1.1);
+}
+
+.site-main .skill-area .first-row .col-lg-4 > .single-skill:hover > img {
+  filter: brightness(1);
+} 
+
+.site-main .skill-area .experience-area {
+  padding-left: 1rem;
+}
+
+.site-main .skill-area .experience-area h2 {
+  font-size: 2.8rem;
+}
+
+.site-main .skill-area .experience-area .years-area h1 {
+  font-size: 7rem;
+  margin-right: 3rem;
+  line-height: 0rem;
+  margin-top: -1rem;
+}
+
+.site-main .skill-area .experience-area > span {
+  display: block;
+  margin-left: 3rem;
+  font-size: 2rem;
+}
+
+
+
+.site-main .skill-area .experience-area .years-area {
+  border: 3px solid;
+  border-style: dashed;
+  border-width: 0.3rem;
+  padding: 1rem 5rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  width: 1rem;
+  height: 10rem;
+  margin-bottom: 8rem;
+  position: relative;
+}
+
+.site-main .skill-area .experience-area .bg-panel {
+  position: absolute;
+  left: -200px;
+  top: -3%;
+  background: var(--gradient-color);
+  width: 400px;
+  height: 400px;
+  margin-left: 345px;
+  z-index: -1;
+}
+
+.site-main .skill-area .experience-area .years-area .years {
+  font: normal;
+  font-weight: bold;
+  z-index: 2;
+  margin-top: 3rem;
+  margin-left: 1.7rem;
+}
+
+.site-main .skill-area .experience-area .email-area a {
+  margin-bottom: 3rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.site-main .skill-area .experience-area .email-area {
+  padding-left: 8rem;
+}
+
+.site-main .skill-area .experience-area .email-area .icon {
+  position: relative;
+  display: block;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.site-main .skill-area .experience-area .email-area .far {
+  padding-top: 0.5rem;
+  text-align: center;
+  transition: 0.6s;
+  box-shadow: var(--box-shadow);
+}
+
+.site-main .skill-area .experience-area .email-area .icon:hover {
+  transform: translate(0, -15px);
+}
+
+.site-main .skill-area .experience-area .email-area .text {
+  margin-left: 1rem;
+}
+
+
+/* End Skill Area */
+
+/* Start Project Area */
+
+.site-main .project-area {
+  padding: 4rem 0;
+}
+
+.site-main .project-area .button-group button {
+  padding-bottom: 3rem;
+  background: transparent;
+  border: none;
+  font: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.site-main .project-area .button-group button + button {
+  padding-left: 3rem;
+}
+
+.site-main .project-area h1 {
+  font-weight: 800;
+  font-size: 4rem;
+}
+
+.site-main .project-area .grid .our-project > .title h4 {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 12px;
+}
+
+.site-main .project-area .grid .our-project img {
+  border: 1px;
+  border: transparent; /* !importanté */
+  border-radius: 8px;
+  border-color: #000;
+}
+
+.site-main .project-area .grid .our-project > .title span {
+  line-height: 12px;
+}
+
+button:focus,
+button:active
+button:hover
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  box-shadow: none !important;
+}
+
+.site-main .project-area .grid .our-project .img a img {
+  filter: brightness(0.5);
+}
+
+.site-main .project-area .grid .our-project .img a:hover img{
+  filter: brightness(1) drop-shadow(1px 8px 30px #b1afaf);
+}
+
+/* End Project Area */
+
+/* Start Follow Area */
+
+.site-main .follow-me .follow {
+  background: var(--gradient-color);
+  padding: 3rem 0rem;
+  margin: 3rem auto;
+}
+
+.site-main .follow-me .follow .follow-title h4 {
+  font: normal;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-top: -1.5rem;
+}
+
+.site-main .follow-me .follow .follow-title p {
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.site-main .follow-me .follow form .input-textbox input{
+  width: 400px;
+  border: 1px solid #fff;
+  color: #000;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.site-main .follow-me .follow form .input-textbox input::placeholder {
+  color: #000;
+}
+
+.site-main .follow-me .follow form .btn-submit button {
+  background: #fff;
+  color: #000;
+  padding: 0.5rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+
+
+/* End Follow Area */
+
+
+/* Start Footer Area */
+
+footer.footer-area {
+  padding: 3rem 0;
+}
+footer.footer-area .site-logo {
+  margin-top: -6rem;
+  margin-bottom: 1rem;
+}
+footer.footer-area .social h3 {
+  font-weight: bold;
+  line-height: 20px;
+  font-size: 1.8rem;
+}
+
+footer.footer-area .copyrights p {
+  color: #000;
+  line-height: 20px;
+}
+
+footer.footer-area .copyrights a {
+  text-decoration: none;
+}
+
+footer.footer-area .social a > i {
+  font-size: 22px;
+  padding: 2rem;
+  color: var(--border-color);
+}
+
+footer.footer-area .social a:hover > i {
+  color: var(--primary-color);
+}
+
+/* End Footer Area */

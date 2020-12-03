@@ -1,0 +1,92 @@
+
+
+
+/*If the viewport is equal to 340px or less than */
+
+@media only screen and (max-width: 340px) {
+
+  .header-area .main-menu .navbar,
+  .header-area .main-menu .navbar .navbar-brand,
+  .site-main .follow-me .follow .follow-title,
+  .site-main .follow-me .follow .follow-title p,
+  .site-main .follow-me .follow .follow-title h4, 
+  .site-main .follow-me .follow 
+   {
+    padding: 2%;
+    margin: 0;
+  }
+
+  .site-main .site-banner .site-title h1 {
+    font-size: 70px;
+  }
+
+  .site-main .follow-me .follow form .input-textbox input {
+    width: 2rem;
+  }
+
+
+}
+
+@media only screen and (max-width: 792px) {
+  .site-main .about-area .about-title h2 > span {
+    font-weight: bold;
+    font-size: 31px;
+    letter-spacing: 10px;
+  }
+
+  .site-main .about-area .about-title h2 .story {
+    font-size: 40px;
+    letter-spacing: 4px;
+    line-height: 40px;
+  }
+
+  .site-main .skill-area .first-row .col-lg-4 > .single-skill {
+    padding: 1rem 0rem;
+  }
+
+  .site-main .skill-area .first-row .col-lg-4 > .single-skill > img {
+    width: 100px;
+  }
+
+  .site-main .skill-area .experience-area .years-area {
+    padding-left: 0rem;
+    width: 100%;
+    border: transparent;
+  }
+
+  .site-main .skill-area .experience-area .bg-panel {
+    margin-left: 0%;
+    width: 10%;
+  }
+
+  .site-main .skill-area .experience-area .years-area h1 {
+    font-size: 8rem;
+    margin-left: -10rem;
+    line-height: 0rem;
+    margin-top: -1rem;
+  }
+
+  .site-main .skill-area .experience-area .email-area {
+    margin-left: -17rem;
+  }
+
+  .footer-area .social .follow-text {
+    font-size: 1.3rem;
+    padding: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .site-main .follow-me .follow form .btn-submit button {
+    margin-top: 3rem;
+    margin-left: 1rem;
+  }
+  .site-main .follow-me .follow form .input-textbox input {
+    width: 300px;
+    margin-left: 2rem;
+  }
+
+  .button {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+  }
+}

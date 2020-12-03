@@ -1,0 +1,79 @@
+
+/* Global Classes */
+
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* Global Button */
+.button {
+  margin-top: 20px;
+  padding: 0.8rem 1.3rem;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative; 
+  border: 3px solid transparent;
+  border-radius: 5px;
+}
+
+.button.primary-button {
+  background:#000 ;
+  background-clip: padding-box;
+  color: #fff;
+  transition: background-color 0.6s ease;
+  box-shadow: var(--box-shadow);
+}
+
+.button.primary-button:hover {
+  background-clip: padding-box;
+  color: #000;
+  background: #fff;
+  border-color:#000;
+}
+
+.button.primary-button::after, .button.secondary-button::after {
+  content: "";
+  background: #000;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  border-radius: 5px;
+  z-index: -1;
+}
+
+.button.secondary-button {
+  background-clip: padding-box;
+  color: #000;
+  border-color: #000;
+  transition: background-color 0.6s ease;
+}
+
+.button.secondary-button:hover {
+  background: #000;
+  border-color: #fff;
+  color: whitesmoke;
+  box-shadow: var(--box-shadow);
+}
+
+p.para {
+  color: var(--text-color);
+  font: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.navbar_fixed {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: var(--box-shadow);
+  z-index: 999;
+  transition: background 1s ease;
+}
