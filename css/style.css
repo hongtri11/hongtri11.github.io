@@ -354,7 +354,7 @@ body {
 .site-main .skill-area .first-row .col-lg-4 > .single-skill > img {
   width: 70%;
   height: 90%;
-  filter: brightness(0.2);
+  filter: brightness(0.45);
 }
 
 .site-main .skill-area .first-row .col-lg-4 > .single-skill:hover {
@@ -376,15 +376,15 @@ body {
 
 .site-main .skill-area .experience-area .years-area h1 {
   font-size: 7rem;
-  margin-right: 3rem;
-  line-height: 0rem;
-  margin-top: -1rem;
+  position: relative;
+  bottom: 45px;
+  right: 30px;
+  margin-right: 1rem;
 }
 
 .site-main .skill-area .experience-area > span {
   display: block;
   margin-left: 3rem;
-  font-size: 2rem;
 }
 
 
@@ -392,13 +392,13 @@ body {
 .site-main .skill-area .experience-area .years-area {
   border: 3px solid;
   border-style: dashed;
-  border-width: 0.3rem;
-  padding: 1rem 5rem;
-  margin-top: 1rem;
-  margin-left: 1rem;
+  border-width: 0.2rem;
+  padding: 0 3rem;
+  margin-top: 2rem;
+  margin-left: 5rem;
   width: 1rem;
   height: 10rem;
-  margin-bottom: 8rem;
+  margin-bottom: 7rem;
   position: relative;
 }
 
@@ -436,6 +436,7 @@ body {
   display: block;
   width: 65px;
   height: 65px;
+  margin-right: 0.5rem;
   border-radius: 50%;
   background: #fff;
 }
